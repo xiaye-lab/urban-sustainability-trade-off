@@ -1,0 +1,13 @@
+Feature,VIF,Abl_ECSI,Abl_SEVI,Abl_Total,Decision,Reason
+BCR,8.07,0.0586,0.1227,0.181,KEEP,VIF=8.1. Ablation total=0.181. Acceptable collinearity or sufficiently distinct contribution.
+NB_BCR,9.55,0.1642,0.1286,0.293,KEEP,VIF=9.5. Ablation total=0.293. Acceptable collinearity or sufficiently distinct contribution.
+FAR,10.58,0.1632,0.1143,0.278,KEEP,VIF=10.6. Ablation total=0.278. Acceptable collinearity or sufficiently distinct contribution.
+NB_FAR,15.69,0.1492,0.0192,0.168,KEEP,VIF=15.7. Ablation total=0.168. Acceptable collinearity or sufficiently distinct contribution.
+AHI,8.78,0.0701,0.0231,0.093,CONSIDER DROP,"AHI individual ablation is weak (ECSI +0.070, SEVI +0.023). NB_AHI is 3× more important (ECSI +0.220). VIF(AHI)=8.8. Same GNN-redundancy logic as ABV: neighbourhood height dominates. Less urgent than ABV since VIF<10; monitor after other drops."
+NB_AHI,22.82,0.2202,0.0981,0.318,KEEP,VIF=22.8. Ablation total=0.318. Acceptable collinearity or sufficiently distinct contribution.
+ABV,10.23,0.0567,0.0416,0.098,CONSIDER DROP,"ABV individual ablation is the weakest of all features (ECSI +0.057, SEVI +0.042). NB_ABV is 5× more important (ECSI +0.258). VIF(ABV)=10.2. In a GNN, NB_ABV already encodes neighbourhood building volume, making local ABV largely redundant. Drop ABV if you want a leaner 10-feature model; keep it if reviewers expect local+neighbourhood pairs to be symmetric."
+NB_ABV,25.87,0.2577,0.0437,0.301,KEEP,VIF=25.9. Ablation total=0.301. Acceptable collinearity or sufficiently distinct contribution.
+NDVI,14.13,0.2774,0.0914,0.369,KEEP,VIF=14.1. Ablation total=0.369. Acceptable collinearity or sufficiently distinct contribution.
+NDWI,13.63,0.1989,0.0444,0.243,DROP,"NDWI (Green–NIR water index) and NDVI share the same Near-IR band. r(NDVI,NDWI) is typically 0.75–0.90 in urban Singapore. NDVI has higher individual ablation importance (ECSI +0.277 vs +0.199) and is more interpretable as a greenery proxy. Dropping NDWI reduces VIF for NDVI from ~14 to likely <5."
+DIS_CBD,1.46,0.3228,0.0692,0.392,KEEP,VIF=1.5. Ablation total=0.392. Acceptable collinearity or sufficiently distinct contribution.
+DIS_MRT,1.87,0.1321,0.099,0.231,KEEP,VIF=1.9. Ablation total=0.231. Acceptable collinearity or sufficiently distinct contribution.

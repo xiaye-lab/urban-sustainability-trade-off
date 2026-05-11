@@ -1,0 +1,5 @@
+Feature_A,Feature_B,Pearson_r,Abs_r,Level
+AHI,NB_AHI,0.8136,0.8136,high
+BCR,FAR,0.7926,0.7926,high
+BCR,NB_BCR,0.7629,0.7629,high
+NB_BCR,FAR,0.6471,0.6471,moderate
