@@ -1,0 +1,7 @@
+Composite,Comparison,Spearman_r
+ECSI,combined_vs_equal,0.9547
+ECSI,combined_vs_critic,0.994
+ECSI,combined_vs_entropy,0.9693
+SEVI,combined_vs_equal,0.9454
+SEVI,combined_vs_critic,0.9693
+SEVI,combined_vs_entropy,0.9686
