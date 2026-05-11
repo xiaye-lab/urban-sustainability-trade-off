@@ -1,0 +1,7 @@
+Feature_A,Feature_B,Pearson_r,Abs_r,Level,Pair_type
+AHI,NB_AHI,0.8098,0.8098,high,orig x orig
+BCR,FAR,0.7901,0.7901,high,orig x orig
+BCR,NB_BCR,0.7628,0.7628,high,orig x orig
+LSI,LPI,-0.7293,0.7293,high,new x new
+NB_BCR,FAR,0.6422,0.6422,moderate,orig x orig
+LPI,SHDI,-0.6213,0.6213,moderate,new x new
